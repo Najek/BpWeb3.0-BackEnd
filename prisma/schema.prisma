@@ -28,6 +28,7 @@ model Empleado {
   numeroEmergencia    String?
   eps                 String?
   pensiones           String?
+  cesantias           String?
   arl                 String?
   salario             Int?
   fechaIngreso        DateTime?
@@ -51,6 +52,7 @@ model Usuario {
   empleadoId    Int       @unique
 
   permisos      PermisoUsuario[]
+  sesion        Session?
 
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
@@ -72,4 +74,20 @@ model PermisoUsuario {
   permisoId         Int
 
   @@unique([usuarioId, permisoId])
+}
+
+model Session {
+  id                String      @id @default(uuid())
+  usuario           Usuario     @relation(fields: [usuarioId], references: [id])
+  usuarioId         Int         @unique
+  refreshTokenHash  String
+  jti               String
+  familyId          String
+  status            String
+  userAgent         String?
+  ip                String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  expiresAt         DateTime
+  lastUsedAt        DateTime?
 }
