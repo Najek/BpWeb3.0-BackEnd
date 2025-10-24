@@ -1,8 +1,8 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import authRoutes from "./routes/auth.routes.js";
-import empleadoRoutes from "./routes/empleado.routes.js";
+import authRoutes from "./routes/auth.routes";
+import empleadoRoutes from "./routes/empleado.routes";
 import { requireAuth, requirePermiso } from "./middlewares/auth.middleware.js";
 
 dotenv.config();

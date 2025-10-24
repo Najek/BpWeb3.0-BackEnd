@@ -1,4 +1,4 @@
-import prisma from "../prisma/client.js";
+import prisma from "../prisma/client";
 
 // Servicio para obtener los empleados registrados
 export async function obtenerEmpleados() {

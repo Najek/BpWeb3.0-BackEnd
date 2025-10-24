@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { obtenerEmpleados } from "../services/empleado.service.js";
+import { obtenerEmpleados } from "../services/empleado.service";
 
 // Controlador para GET /api/empleados
 export async function getEmpleados(req: Request, res: Response) {

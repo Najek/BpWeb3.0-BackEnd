@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { getEmpleados } from "../controllers/empleado.controller.js";
-import { requireAuth, requirePermiso } from "../middlewares/auth.middleware.js";
+import { getEmpleados } from "../controllers/empleado.controller";
+import { requireAuth, requirePermiso } from "../middlewares/auth.middleware";
 
 const router = Router();
 
