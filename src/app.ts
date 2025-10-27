@@ -3,14 +3,15 @@ import cors from "cors";
 import dotenv from "dotenv";
 import authRoutes from "./routes/auth.routes";
 import empleadoRoutes from "./routes/empleado.routes";
-import { requireAuth, requirePermiso } from "./middlewares/auth.middleware.js";
+//import { requireAuth, requirePermiso } from "./middlewares/auth.middleware.js";
 
 dotenv.config();
 
 const app = express();
 app.use(cors({
   origin: "http://localhost:3000",
-  credentials: true
+  credentials: true,
+  allowedHeaders: ["Authorization", "Content-Type"],
 }));
 app.use(express.json());
 
