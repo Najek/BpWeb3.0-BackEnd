@@ -5,4 +5,5 @@ module.exports = {
     '^.+\\.ts$': ['ts-jest', { useESM: true }],
   },
   moduleFileExtensions: ['ts', 'js', 'json', 'node','mts'],
+  testMatch: ['**/src/**/*.test.ts'],
 };

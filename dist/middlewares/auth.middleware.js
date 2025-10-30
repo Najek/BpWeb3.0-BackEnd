@@ -14,8 +14,6 @@ function requireAuth(req, res, next) {
     }
     const split = authHeader.split(" ");
     if (split.length !== 2 || split[0] !== "Bearer") {
-        const authHeader = req.headers.authorization;
-        console.log("HEADER RECIBIDO EN BACKEND:", authHeader);
         return res.status(401).json({ message: "Formato de token inválido" });
     }
     const token = split[1];
