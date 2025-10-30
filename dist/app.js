@@ -8,6 +8,7 @@ const cors_1 = __importDefault(require("cors"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const auth_routes_1 = __importDefault(require("./routes/auth.routes"));
 const empleado_routes_1 = __importDefault(require("./routes/empleado.routes"));
+//import { requireAuth, requirePermiso } from "./middlewares/auth.middleware.js";
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)({

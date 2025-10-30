@@ -19,6 +19,7 @@ export declare function authenticateUser(username: string, password: string): Pr
         numeroEmergencia: string | null;
         eps: string | null;
         pensiones: string | null;
+        cesantias: string | null;
         arl: string | null;
         salario: number | null;
         fechaIngreso: Date | null;
